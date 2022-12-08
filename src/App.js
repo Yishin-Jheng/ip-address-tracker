@@ -5,7 +5,7 @@ import InfoList from "./InfoList.js";
 import Map from "./Map.js";
 import "./scss/style.scss";
 
-// ip for test: 133.242.187.207
+// test ip: 133.242.187.207
 
 function App() {
   const [ipData, setIpData] = useState({});
@@ -30,10 +30,10 @@ function App() {
     }
   };
 
-  // // fetch data when user load the page
-  // useEffect(() => {
-  //   fetchData();
-  // }, []);
+  // fetch data when user load the page
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   const handleSubmit = async function (ip) {
     try {
