@@ -1,26 +1,27 @@
-function InfoList({ ipData }) {
-  return (
-    <div className="ip-info">
-      <div className="ip-info__address">
-        <span className="ip-info__title">IP Address</span>
-        <span className="ip-info__content">{ipData.ip}</span>
+import InfoContent from "./InfoContent.js";
+
+function InfoList({ ipData, errMsg }) {
+  if (!errMsg) {
+    return (
+      <div className="ip-info">
+        <InfoContent label="IP Address" data={ipData.ip} />
+        <InfoContent label="Location" data={ipData.country} />
+        <InfoContent
+          label="Timezone"
+          data={ipData.timezone ? `UTC ${ipData.timezone}` : ""}
+        />
+        <InfoContent label="ISP" data={ipData.isp} />
       </div>
-      <div className="ip-info__location">
-        <span className="ip-info__title">Location</span>
-        <span className="ip-info__content">{ipData.country}</span>
+    );
+  } else {
+    console.log(errMsg);
+
+    return (
+      <div className="ip-info">
+        <div className="ip-info__error">{errMsg}</div>
       </div>
-      <div className="ip-info__timezone">
-        <span className="ip-info__title">Timezone</span>
-        <span className="ip-info__content">
-          {ipData.timezone ? `UTC ${ipData.timezone}` : ""}
-        </span>
-      </div>
-      <div className="ip-info__isp">
-        <span className="ip-info__title">ISP</span>
-        <span className="ip-info__content">{ipData.isp}</span>
-      </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default InfoList;

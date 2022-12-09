@@ -10,6 +10,7 @@ import "./scss/style.scss";
 function App() {
   const [ipData, setIpData] = useState({});
   const [locData, setLocData] = useState([23.5531, 121.0211]);
+  const [errMsg, setErrMsg] = useState(``);
 
   const fetchData = async function (ip) {
     try {
@@ -26,7 +27,8 @@ function App() {
       setIpData(ipInfo);
       setLocData(locationInfo);
     } catch (err) {
-      console.error(err);
+      const errorMessage = `⚠️ Something wrong with fetching data. Please turn off your AD blocker or check your internet !`;
+      setErrMsg(errorMessage);
     }
   };
 
@@ -36,11 +38,7 @@ function App() {
   }, []);
 
   const handleSubmit = async function (ip) {
-    try {
-      fetchData(ip);
-    } catch (err) {
-      console.error(err);
-    }
+    fetchData(ip);
   };
 
   return (
@@ -48,7 +46,7 @@ function App() {
       <div className="header">
         <h1>IP Address Tracker</h1>
         <SearchBar onSubmit={handleSubmit} />
-        <InfoList ipData={ipData} />
+        <InfoList ipData={ipData} errMsg={errMsg} />
       </div>
       <Map locData={locData} />
     </div>

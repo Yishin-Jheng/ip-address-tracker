@@ -11,7 +11,8 @@ const trackIP = async function (ip) {
 
     return response;
   } catch (err) {
-    throw err;
+    const error = `${err} 💣💣💣`;
+    throw error;
   }
 };
 
