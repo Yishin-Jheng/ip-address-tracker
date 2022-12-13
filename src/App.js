@@ -5,8 +5,6 @@ import InfoList from "./InfoList.js";
 import Map from "./Map.js";
 import "./scss/style.scss";
 
-// test ip: 133.242.187.207
-
 function App() {
   const [ipData, setIpData] = useState({});
   const [locData, setLocData] = useState([23.5531, 121.0211]);
@@ -26,8 +24,9 @@ function App() {
 
       setIpData(ipInfo);
       setLocData(locationInfo);
+      setErrMsg(``);
     } catch (err) {
-      const errorMessage = `⚠️ Something wrong with fetching data. Please turn off your AD blocker or check your internet !`;
+      const errorMessage = `⚠️ Something wrong with fetching data. Please turn off your AD blocker or check your internet.`;
       setErrMsg(errorMessage);
     }
   };

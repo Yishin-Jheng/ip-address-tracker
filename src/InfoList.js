@@ -14,7 +14,7 @@ function InfoList({ ipData, errMsg }) {
       </div>
     );
   } else {
-    console.log(errMsg);
+    console.error(errMsg);
 
     return (
       <div className="ip-info">
