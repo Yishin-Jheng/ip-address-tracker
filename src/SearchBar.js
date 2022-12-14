@@ -21,7 +21,7 @@ function SearchBar({ onSubmit }) {
           onChange={handleChange}
           placeholder="Search for any IP address or domain"
         ></input>
-        <button type="submit">
+        <button type="submit" aria-label="sumbit the ip address">
           <FaAngleRight />
         </button>
       </form>

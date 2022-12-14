@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution page on Frontend Mentor](https://your-solution-url.com)
-- Live Site URL: [Live site on Netlify](ip-address-tracker-yishin.netlify.app)
+- Solution URL: [Solution page on Frontend Mentor](https://www.frontendmentor.io/solutions/ip-address-tracker-f2V3nZmoav)
+- Live Site URL: [Live site on Netlify](https://ip-address-tracker-yishin.netlify.app/)
 
 ## My process
 

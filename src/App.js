@@ -26,7 +26,8 @@ function App() {
       setLocData(locationInfo);
       setErrMsg(``);
     } catch (err) {
-      const errorMessage = `⚠️ Something wrong with fetching data. Please turn off your AD blocker or check your internet.`;
+      const errorMessage = `⚠️ Something wrong with fetching data.
+      Please turn off your AD blocker or check your internet.`;
       setErrMsg(errorMessage);
     }
   };
@@ -42,11 +43,11 @@ function App() {
 
   return (
     <div className="container">
-      <div className="header">
+      <header className="header">
         <h1>IP Address Tracker</h1>
         <SearchBar onSubmit={handleSubmit} />
         <InfoList ipData={ipData} errMsg={errMsg} />
-      </div>
+      </header>
       <Map locData={locData} />
     </div>
   );
