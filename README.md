@@ -75,7 +75,7 @@ Users should be able to:
 ### Useful resources
 
 - [React Icons](https://react-icons.github.io/react-icons) - It is a very useful package. I can add tons of icons by just importing it, very convenient and efficient.
-- [How to pin the location with custom icon correctly](https://stackoverflow.com/questions/46101450/explanation-of-leaflet-custom-icon-latlng-vs-xy-coordinates) - It is a very useful package. I can add tons of icons by just importing it, very convenient and efficient.
+- [How to pin the location with custom icon correctly](https://stackoverflow.com/questions/46101450/explanation-of-leaflet-custom-icon-latlng-vs-xy-coordinates)
 
 ## Author
 
