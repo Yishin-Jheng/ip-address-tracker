@@ -10,7 +10,10 @@ function SearchBar({ onSubmit }) {
   };
 
   const handleChange = function (e) {
-    setInput(e.target.value);
+    // remove the characters which are forbidden, ^0-9:. means NOT number 0 to 9, '.', and ':'
+    // g - global, to make sure it checks the whole string
+    // i - insensitive, to make sure it doesn't bother about the case of the string
+    setInput(e.target.value.replace(/[^0-9:.]/gi, ""));
   };
 
   return (
