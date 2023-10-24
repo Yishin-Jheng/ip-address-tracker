@@ -2,7 +2,7 @@ import axios from "axios";
 
 const trackIP = async function (ip) {
   try {
-    const apiKey = "at_LYAtTDbUsK9caQPBvAxJkrt1rx18y";
+    const apiKey = process.env.REACT_APP_API_KEY;
     const ipAddress = ip ? ip : "";
 
     const response = await axios.get(

@@ -10,6 +10,7 @@ This is a solution to the [IP address tracker challenge on Frontend Mentor](http
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
+  - [Components structure](#components-structure)
   - [What I learned](#what-i-learned)
   - [Useful resources](#useful-resources)
 - [Author](#author)
@@ -43,6 +44,10 @@ Users should be able to:
 - SCSS - CSS Preprocessor
 - [React](https://reactjs.org/) - JS library
 - [Leaflet](https://leafletjs.com/) - JS library
+
+### Components structure
+
+![](./components-structure.png)
 
 ### What I learned
 
