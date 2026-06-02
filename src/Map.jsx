@@ -1,9 +1,10 @@
 import L from "leaflet";
 import { MapContainer, TileLayer, Marker } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
 import marker from "./images/icon-location.png";
 
 function Map({ locData }) {
-  const stadiaApiKey = process.env.REACT_APP_STADIA_MAP_API_KEY;
+  const stadiaApiKey = import.meta.env.VITE_STADIA_MAP_API_KEY;
   const position = locData;
 
   const customIcon = new L.Icon({

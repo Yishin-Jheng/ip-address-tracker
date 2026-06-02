@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import trackIP from "./api.js";
 import SearchBar from "./SearchBar.js";
-import InfoList from "./InfoList.js";
-import Map from "./Map.js";
+import InfoList from "./InfoList.jsx";
+import Map from "./Map.jsx";
 import "./scss/style.scss";
 
 function App() {
