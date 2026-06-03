@@ -17,7 +17,7 @@ function Map({ locData }) {
   return (
     <MapContainer
       id="map"
-      className="map"
+      className="h-[70vh] w-screen max-phone:h-[60vh]"
       center={position}
       zoom={8}
       scrollWheelZoom={true}

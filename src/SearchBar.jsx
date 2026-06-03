@@ -17,15 +17,21 @@ function SearchBar({ onSubmit }) {
   };
 
   return (
-    <div className="search-bar">
-      <form onSubmit={handleFormSubmit}>
+    <div className="flex justify-center items-start">
+      <form className="flex items-stretch" onSubmit={handleFormSubmit}>
         <input
+          id="ip-address-input"
+          className="bg-white p-6 w-160 text-gray-dark text-[1.5rem] leading-none cursor-text rounded-s-[10px] placeholder:text-gray-light max-mobile:p-8 max-phone:text-[2rem] max-mini:w-[calc(70vw-40px)]"
           value={input}
           onChange={handleChange}
           placeholder="Search for any IP address or domain"
         ></input>
-        <button type="submit" aria-label="sumbit the ip address">
-          <FaAngleRight />
+        <button
+          className="p-6 cursor-pointer rounded-e-[10px] bg-gray-dark transition-all duration-300 hover:brightness-150 max-mobile:p-8"
+          type="submit"
+          aria-label="sumbit the ip address"
+        >
+          <FaAngleRight className="fill-white text-[1.4rem] max-phone:text-[1.8rem]" />
         </button>
       </form>
     </div>

@@ -12,14 +12,6 @@ $screen-mini: 26.875em; // 430px
 
 ///////////////////////////////
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-
 html {
   font-size: 62.5%; // 10px;
   font-family: "Rubik", sans-serif;
@@ -58,7 +50,7 @@ html {
   }
 }
 
-h1 {
+.h1 {
   color: $color-white;
   font-size: 2.8rem;
   font-weight: 700;

@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import trackIP from "./api.js";
-import SearchBar from "./SearchBar.js";
+import SearchBar from "./SearchBar.jsx";
 import InfoList from "./InfoList.jsx";
 import Map from "./Map.jsx";
-import "./scss/style.scss";
 
 function App() {
   const [ipData, setIpData] = useState({});
@@ -42,9 +41,11 @@ function App() {
   };
 
   return (
-    <div className="container">
-      <header className="header">
-        <h1>IP Address Tracker</h1>
+    <div className="w-full">
+      <header className="h-[30vh] relative pt-12 pb-40 bg-[url(./src/images/pattern-bg.png)] bg-cover flex flex-col gap-8 justify-center items-center max-phone:gap-[10%] max-phone:h-[40vh] max-phone:pt-0 max-phone:pb-80">
+        <h1 className="text-white text-[2.8rem] leading-none font-bold max-phone:text-[3rem]">
+          IP Address Tracker
+        </h1>
         <SearchBar onSubmit={handleSubmit} />
         <InfoList ipData={ipData} errMsg={errMsg} />
       </header>
