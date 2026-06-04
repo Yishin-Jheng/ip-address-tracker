@@ -13,13 +13,13 @@ function App() {
     try {
       const result = await trackIP(ip);
       const ipInfo = {
-        ip: result.data.ip,
-        country: result.data.location.region,
-        timezone: result.data.location.timezone,
-        isp: result.data.isp,
+        ip: result.ip,
+        country: result.location.region,
+        timezone: result.location.timezone,
+        isp: result.isp,
       };
 
-      const locationInfo = [result.data.location.lat, result.data.location.lng];
+      const locationInfo = [result.location.lat, result.location.lng];
 
       setIpData(ipInfo);
       setLocData(locationInfo);
