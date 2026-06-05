@@ -3,9 +3,13 @@ import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import marker from "./images/icon-location.png";
 
-function Map({ locData }) {
+interface MapProps {
+  locData: [number, number];
+}
+
+function Map(props: MapProps) {
+  const { locData } = props;
   const stadiaApiKey = import.meta.env.VITE_STADIA_MAP_API_KEY;
-  const position = locData;
 
   const customIcon = new L.Icon({
     iconUrl: marker,
@@ -18,7 +22,7 @@ function Map({ locData }) {
     <MapContainer
       id="map"
       className="h-[70vh] w-screen max-phone:h-[60vh]"
-      center={position}
+      center={locData}
       zoom={8}
       scrollWheelZoom={true}
       key={`${locData}`}
@@ -27,7 +31,7 @@ function Map({ locData }) {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url={`https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png?api_key=${stadiaApiKey}`}
       />
-      <Marker position={position} icon={customIcon}></Marker>
+      <Marker position={locData} icon={customIcon}></Marker>
     </MapContainer>
   );
 }

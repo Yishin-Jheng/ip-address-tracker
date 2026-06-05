@@ -1,18 +1,23 @@
 import { useState } from "react";
 import { FaAngleRight } from "react-icons/fa";
 
-function SearchBar({ onSubmit }) {
+interface SearchBarProps {
+  onSubmit: (input: string) => void;
+}
+
+function SearchBar(props: SearchBarProps) {
+  const { onSubmit } = props;
   const [input, setInput] = useState("");
 
-  const handleFormSubmit = function (e) {
+  const handleFormSubmit = function (e: React.SubmitEvent<HTMLFormElement>) {
     e.preventDefault();
     onSubmit(input);
   };
 
-  const handleChange = function (e) {
+  const handleChange = function (
+    e: React.ChangeEvent<HTMLInputElement, HTMLInputElement>,
+  ) {
     // remove the characters which are forbidden, ^0-9:. means NOT number 0 to 9, '.', and ':'
-    // g - global, to make sure it checks the whole string
-    // i - insensitive, to make sure it doesn't bother about the case of the string
     setInput(e.target.value.replace(/[^0-9:.]/gi, ""));
   };
 
