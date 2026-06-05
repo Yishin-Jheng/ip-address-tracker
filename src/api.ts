@@ -27,7 +27,7 @@ const trackIP = async function (ip?: string): Promise<IpifyResponse> {
   try {
     const ipAddress = ip ? ip : "";
     const response = await axios.get<IpifyResponse>(
-      `/.netlify/functions/get-geo?ip=${ipAddress}`,
+      `/.netlify/functions/getGeoApi?ip=${ipAddress}`,
     );
 
     return response.data;
