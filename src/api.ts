@@ -25,13 +25,9 @@ interface IpifyResponse {
 
 const trackIP = async function (ip?: string): Promise<IpifyResponse> {
   try {
-    const apiKey = import.meta.env.VITE_IPIFY_API_KEY;
-
-    if (!apiKey) throw new Error("VITE_IPIFY_API_KEY is not set");
-
     const ipAddress = ip ? ip : "";
     const response = await axios.get<IpifyResponse>(
-      `https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&ipAddress=${ipAddress}`,
+      `/.netlify/functions/get-geo?ip=${ipAddress}`,
     );
 
     return response.data;
