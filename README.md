@@ -41,9 +41,11 @@ Users should be able to:
 
 - Desktop-first workflow
 - Semantic HTML5 markup
-- SCSS - CSS Preprocessor
+- Tailwind CSS - utility-first CSS framework
 - [React](https://reactjs.org/) - JS library
 - [Leaflet](https://leafletjs.com/) - JS library
+- <s>SCSS - CSS preprocessor</s> **Deprecated**
+- Vite - build tool for the web
 
 ### Components structure
 
