@@ -9,7 +9,6 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "skipLibCheck": true,
-    "allowJs": true, // TODO: 重構完TS後移除
     "noEmit": true
   },
   "include": ["src"]
